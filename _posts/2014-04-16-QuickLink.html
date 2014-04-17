@@ -3,5 +3,148 @@
 　　title: 你好，世界
 ---
 　　<h2>{{ page.title }}</h2>
-　　<p>我的第一篇文章</p>
-　　<p>{{ page.date | date_to_string }}</p>
+　　<style type="text/css">
+    .navLink{
+
+    }
+    .container{
+        position: absolute;
+        bottom: -150px;
+        left: 40%;
+    }
+    .Bnav{
+        width: 300px;
+        height: 300px;
+        border-radius: 212px;
+        border: 1px solid #f02387;
+        position: relative;
+        background:  #f02387;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+
+        -moz-transform:scale(0.1);
+        -webkit-transform: scale(0.1);
+        -o-transform: scale(0.1);
+        -ms-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    .Bnav ul{
+        width: 100%;
+        text-align: center;
+
+    }
+    .Bnav li{
+
+        display: inline-block;
+        width: 30%;
+        height: 150px;
+        color: #fff;
+        font-size: 20px;
+        font-family: simhei;
+        /*/border: 1px solid #000099;*/
+    }
+    .Snav{
+        position: absolute;
+        bottom: 80px;
+        left: 80px;
+        width: 150px;
+        height: 150px;
+        /*border: 1px solid #000;*/
+        border-radius: 105px;
+        background: #f2dede;
+        text-align: center;
+
+    }
+    .Snav p{
+        font-family: Arial;
+        color: #fff;
+        font-size: 28px;
+    }
+    .li1{
+        -moz-transform: rotate(-60deg) translate(-20px,30px);
+        -webkit-transform: rotate(-60deg) translate(-20px,30px);
+        -o-transform: rotate(-60deg) translate(-20px,30px);
+        -ms-transform: rotate(-60deg) translate(-20px,30px);
+        transform: rotate(-60deg) translate(-20px,30px);
+    }
+    .li3{
+        -moz-transform: rotate(60deg) translate(-25px,100px);
+        -webkit-transform: rotate(60deg) translate(-25px,100px);
+        -o-transform: rotate(60deg) translate(-25px,100px);
+        -ms-transform: rotate(60deg) translate(-25px,100px);
+        transform: rotate(60deg) translate(-25px,100px);
+    }
+    .li2{
+        -moz-transform: translate(-35px,10px);
+        -webkit-transform: translate(-35px,10px);
+        -o-transform: translate(-35px,10px);
+        -ms-transform: translate(-35px,10px);
+        transform: translate(-35px,10px);
+    }
+    .line{
+        border: 1px solid #fff;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 100px;
+        -moz-transform: rotate(-30deg) translate(0,0px);
+        -webkit-transform: rotate(-30deg) translate(0,0px);
+        -o-transform: rotate(-30deg) translate(0,0px);
+        -ms-transform: rotate(-30deg) translate(0,0px);
+        transform: rotate(-30deg) translate(0,0px);
+    }
+    .line2{
+        left: 200px;
+        -moz-transform: rotate(24deg) translate(0,0px);
+        -webkit-transform: rotate(24deg) translate(0,0px);
+        -o-transform: rotate(24deg) translate(0,0px);
+        -ms-transform: rotate(24deg) translate(0,0px);
+        transform: rotate(24deg) translate(0,0px);
+    }
+</style>
+
+
+<div class="navLink">
+    <div class="container">
+        <div class="Bnav">
+            <ul>
+                <li class="li1">仪器预约</li>
+                <li  class="li2">首页</li>
+                <li  class="li3">我的资料</li>
+
+            </ul>
+            <div class="line"></div>
+            <div class="line line2"></div>
+
+        </div>
+        <div class="Snav"><p>LINK</p></div>
+    </div>
+    <p>{{ page.date | date_to_string }}</p>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+    var a=document.getElementsByClassName("Snav")[0];
+    var isBlock=0;
+    a.onclick=function(){
+        if(isBlock==0){
+            $('.Bnav').css("-webkit-transform","scale(1)");
+            $('.Bnav').css("-moz-transform","scale(1)");
+            $('.Bnav').css("-o-transform","scale(1)");
+            $('.Bnav').css("transform","scale(1)");
+            isBlock=1;
+        }
+        else{
+            $('.Bnav').css("-webkit-transform","scale(0.1)");
+            $('.Bnav').css("-moz-transform","scale(0.1)");
+            $('.Bnav').css("-o-transform","scale(0.1)");
+            $('.Bnav').css("transform","scale(0.1)");
+            isBlock=0;
+        }
+
+    };
+</script>
+
+
+　　
